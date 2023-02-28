@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Link to CSS stylesheet -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<!-- Link to JavaScript file -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <title>Web App - Game Over</title>
+</head>
+<body>
+    <h1>Game Over!</h1>
+    {% for image_url in image_urls %}
+        <img src="{{ image_url }}" alt="Generated Image">
+    {% endfor %}
+</body>
+</html>

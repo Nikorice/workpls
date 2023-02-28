@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Link to CSS stylesheet -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<!-- Link to JavaScript file -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <title>Web App</title>
+</head>
+<body>
+    <h1>Round {{ round }}</h1>
+    <img src="{{ image_url }}" alt="Generated Image">
+    <form action="/game" method="post">
+        <input type="text" name="prompt">
+        <input type="hidden" name="round" value="{{ round }}">
+        <input type="hidden" name="image_url" value="{{ image_url }}">
+        <input type="submit" value="Generate Image">
+    </form>
+</body>
+</html>
